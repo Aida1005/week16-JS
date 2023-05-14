@@ -1,0 +1,74 @@
+body{
+    font-family: 'Roboto', sans-serif;
+	color: #161616;
+	margin: 0;
+	padding-bottom: 140px;
+}
+
+.root{
+    padding-top: 50px;
+    padding-bottom: 75px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.container {
+	max-width: 1170px;
+	margin-left: auto;
+	margin-right: auto;
+    padding: 40px 50px;
+    background-color: #fff;
+}
+
+
+h1{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.fuel, .car-condition, .car-brands{
+    padding: 40px 50px;
+    background-color: #f4f8fa;
+}
+
+.car-model, .engine-volume, .payment-method{
+    padding: 40px 50px;
+}
+
+.btn{
+    background-color: rgba(31, 86, 236, 0.3);
+    border: none;
+    border-radius: 7px;
+    height: 40px;
+    width: 190px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.btn:hover{
+    background: rgba(162, 235, 73, 0.471);
+}
+.calc-price {
+	padding: 30px 50px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgb(218, 243, 255);
+	background-color: white;
+	box-shadow: -10px 0px 25px rgba(143, 179, 195, 0.685);
+}
+
+.calc-price-title {
+	font-size: 32px;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+
+.calc-price-value {
+	font-size: 26px;
+	font-weight: 300;
+}
+
+.hidden {
+	display: none;
+}

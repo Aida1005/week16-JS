@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>CAR PRICE CALCULATOR</title>
+</head>
+<body>
+<header>            
+</header>
+<main>
+<section class="root">
+    <div class="container">
+        <h1>Калькулятор стоимости автомобиля</h1>
+        <form name="form1" id="form-calc" action="#" class="form">
+            <div class="car-brands">
+                <h2>Марка автомобиля </h2>
+                <select class="car-brand">
+                    <option value="1" selected>По умолчанию</option>
+                    <option value="2">BWM</option>
+                    <option value="3">Mazda</option>
+                    <option value="4">Mercedes-Benz</option>
+                    <option value="6">Kia</option>
+                </select>
+                </div>
+                <div class="car-model">
+                    <h2>Модель автомобиля </h2>
+                    <select class="car-models">
+                        <option selected>По умолчанию</option>
+                        <option>BMW X1</option>
+                        <option >BMW X3</option>
+                        <option >BMW X4</option>
+                        <option >Mazda CX3</option>
+                        <option >Mazda CX5</option>
+                        <option >Mazda CX9</option>
+                        <option >Mercedes-Benz GLC250</option>
+                        <option >Mercedes-Benz GLC300</option>
+                        <option >Mercedes-Benz SClass</option>
+                        <option >Kia Sorento</option>
+                        <option >Kia Carnival</option>
+                        <option >Kia Rio</option>
+                    </select>
+                        </div>
+            <div class="fuel">
+                <h2>Тип топлива</h2>
+                <input type="radio" id="petrol" name="fuel-type"> 
+                <label for="petrol">бензин (включая гибрид)</label><br/>
+                <input type="radio" id="diesel" name="fuel-type"> 
+                <label for="diesel">дизельное топливо</label><br/>
+                <input type="radio" id="electric" name="fuel-type"> 
+                <label for="electric">электрический</label>
+                </div>
+                <div class="engine-volume">
+                    <h2>Объём двигателя </h2>
+                    <input type="number" min="1.1" max="3.5" name="type-volume">
+                </div>
+                <div class="car-condition">
+                    <h2>Состояния автомобиля </h2>
+                    <input type="radio" id="new" name="car-condition">
+                    <label for="new">новый</label><br/>
+                    <input type="radio" id="used" name="car-condition">
+                    <label for="used">поддержанный</label>
+                    <div class="car-age" hidden>
+                        <select>
+                            <option name="amount-owners">1-2 владельца</option>
+                            <option name="amount-owners">более 3х</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="payment-method">
+                    <h2>Способ оплаты</h2>
+                    <input type="checkbox" id="card" name="payment" value="card">
+                    <label for="card">картой</label><br/>
+                    <input type="checkbox" id="cash" name="payment" value="cash">
+                    <label for="card">наличными</label><br/>
+                    <input type="checkbox" id="bankacc" name="payment" value="bankacc">
+                    <label for="bankacc">счёт на юридическое лицо</label><br/>
+                </div>
+                <div class="btn-submit">
+                    <button type="submit" class="btn">Рассчитать</button>
+                </div>
+                <div class="calc-price">
+                    <div class="calc-price-title">Стоимость автомобиля:</div>
+                    <div class="calc-price-value">
+                        <span id="total-price"></span>
+                        рублей
+                    </div>
+                </div>
+        </form>
+    </div>
+</section>
+</main>
+<footer></footer>
+    
+    <script src="index.js"></script>   
+</body>
+</html>
