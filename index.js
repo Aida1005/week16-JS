@@ -50,7 +50,7 @@ const totalPrice = document.querySelector('#total-price');*/
 }
 });*/
 
-//Устанавливаем слушатель на 
+//Устанавливаем слушатель на "подержанный" option
 const usedCar = document.getElementById("used");
 const ageCar = document.querySelector (".car-age");
 usedCar.addEventListener ("click", () => {
