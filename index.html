@@ -19,66 +19,83 @@
             <div class="car-brands">
                 <h2>Марка автомобиля </h2>
                 <select class="car-brand">
-                    <option value="1" selected>По умолчанию</option>
-                    <option value="2">BWM</option>
-                    <option value="3">Mazda</option>
-                    <option value="4">Mercedes-Benz</option>
-                    <option value="6">Kia</option>
+                    <option selected>По умолчанию</option>
+                    <option value="bmw">BWM</option>
+                    <option value="mazda">Mazda</option>
+                    <option value="Merc">Mercedes-Benz</option>
+                    <option value="kia">Kia</option>
                 </select>
                 </div>
-                <div class="car-model">
+                <div class="model">
                     <h2>Модель автомобиля </h2>
-                    <select class="car-models">
+                    <select class="car-model" name="m-1">
                         <option selected>По умолчанию</option>
-                        <option>BMW X1</option>
-                        <option >BMW X3</option>
-                        <option >BMW X4</option>
-                        <option >Mazda CX3</option>
-                        <option >Mazda CX5</option>
-                        <option >Mazda CX9</option>
-                        <option >Mercedes-Benz GLC250</option>
-                        <option >Mercedes-Benz GLC300</option>
-                        <option >Mercedes-Benz SClass</option>
-                        <option >Kia Sorento</option>
-                        <option >Kia Carnival</option>
-                        <option >Kia Rio</option>
+                        <option value="12">BMW X1</option>
+                        <option value="13">BMW X3</option>
+                        <option value="14">BMW X4</option>
+                        <option value="80">Mazda CX3</option>
+                        <option value="90">Mazda CX5</option>
+                        <option value="105">Mazda CX9</option>
+                        <option value="230">Mercedes Benz GLC250</option>
+                        <option value="250">Mercedes Benz GLC300</option>
+                        <option value="308">Mercedes Benz SClass</option>
+                        <option value="67">Kia Sorento</option>
+                        <option value="72">Kia Carnival</option>
+                        <option value="86">Kia Rio</option>
                     </select>
                         </div>
+                        <div class="price">
+                            <h2> Цена автомобиля  </h2>
+                            <select class="car-price" name="price">
+                                <option selected>По умолчанию</option>
+                                <option value="120000">BMW X1 120000 руб</option>
+                                <option value="130000">BMW X3 130000 руб</option>
+                                <option value="140000">BMW X4 140000 руб</option>
+                                <option value="80500">Mazda CX3 80500 руб</option>
+                                <option value="90000">Mazda CX5 90000 руб</option>
+                                <option value="105000">Mazda CX9 105000 руб</option>
+                                <option value="230000">Mercedes Benz GLC250 230000 руб</option>
+                                <option value="250500">Mercedes Benz GLC300 250500 руб</option>
+                                <option value="308000">Mercedes Benz SClass 308000 руб</option>
+                                <option value="67000">Kia Sorento 67000 руб</option>
+                                <option value="72000">Kia Carnival 72000 руб</option>
+                                <option value="86000">Kia Rio 86000 руб</option>
+                            </select>
+                                </div>
             <div class="fuel">
                 <h2>Тип топлива</h2>
-                <input type="radio" id="petrol" name="fuel-type"> 
+                <input type="radio" class="f-1" id="petrol" name="fuel-type" value="11" checked> 
                 <label for="petrol">бензин (включая гибрид)</label><br/>
-                <input type="radio" id="diesel" name="fuel-type"> 
+                <input type="radio" class="f-1" id="diesel" name="fuel-type" value="22"> 
                 <label for="diesel">дизельное топливо</label><br/>
-                <input type="radio" id="electric" name="fuel-type"> 
+                <input type="radio" class="f-1" id="electric" name="fuel-type" value="33"> 
                 <label for="electric">электрический</label>
                 </div>
                 <div class="engine-volume">
                     <h2>Объём двигателя </h2>
-                    <input type="number" min="1.1" max="3.5" name="type-volume">
+                    <input type="number" min="1.1" max="3.5" name="type-volume" class="v-1">
                 </div>
                 <div class="car-condition">
                     <h2>Состояния автомобиля </h2>
-                    <input type="radio" id="new" name="car-condition">
+                    <input type="radio" class="c-1" id="new" name="car-condition" value="1"checked>
                     <label for="new">новый</label><br/>
-                    <input type="radio" id="used" name="car-condition">
-                    <label for="used">поддержанный</label>
+                    <input type="radio" class="c-1" id="used" name="car-condition" value="2">
+                    <label for="used">подержанный</label>
                     <div class="car-age" hidden>
-                        <select>
-                            <option name="amount-owners">1-2 владельца</option>
-                            <option name="amount-owners">более 3х</option>
+                        <select class="number-owners">
+                            <option value="1-2" name="amount-owners">1-2 владельца</option selected>
+                            <option value="3+" name="amount-owners">более 3х</option>
                         </select>
                     </div>
                 </div>
                 
-                <div class="payment-method">
+                <div class="payment">
                     <h2>Способ оплаты</h2>
-                    <input type="checkbox" id="card" name="payment" value="card">
-                    <label for="card">картой</label><br/>
-                    <input type="checkbox" id="cash" name="payment" value="cash">
-                    <label for="card">наличными</label><br/>
-                    <input type="checkbox" id="bankacc" name="payment" value="bankacc">
-                    <label for="bankacc">счёт на юридическое лицо</label><br/>
+                    <select class="payment-method" id="payment-method">
+                        <option value="card">Картой</option>
+                        <option value="cash">Наличными</option>
+                        <option value="bankacc">Счёт на юридическое лицо</option>
+                        </select>
                 </div>
                 <div class="btn-submit">
                     <button type="submit" class="btn">Рассчитать</button>

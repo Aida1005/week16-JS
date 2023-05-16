@@ -31,7 +31,7 @@ h1{
     background-color: #f4f8fa;
 }
 
-.car-model, .engine-volume, .payment-method{
+.model, .engine-volume, .payment, .price{
     padding: 40px 50px;
 }
 
