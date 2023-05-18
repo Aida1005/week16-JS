@@ -39,16 +39,7 @@ const totalPrice = document.querySelector('#total-price');*/
 };*/
 
 
-//Устанавливаем слушатель на carBrand
-/*carBrand.addEventListener ("click", () => {
-    const models = carModel[carBrand.value];
-    for (const model in models) {
-    const option = document.createElement("option");
-    //option.value = model;
-    option.text = model;
-    carModel.add(option);
-}
-});*/
+
 
 //Устанавливаем слушатель на "подержанный" option
 const usedCar = document.getElementById("used");
