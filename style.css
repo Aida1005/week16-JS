@@ -26,12 +26,16 @@ h1{
     text-align: center;
 }
 
+
+.engine-capacity input{
+    width: 180px;
+}
 .fuel, .car-condition, .car-brands{
     padding: 40px 50px;
     background-color: #f4f8fa;
 }
 
-.model, .engine-volume, .payment, .price{
+.model, .engine-capacity, .payment, .price{
     padding: 40px 50px;
 }
 

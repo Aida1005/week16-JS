@@ -1,8 +1,8 @@
 //Элементы формы
 
-const carBrand = document.querySelector('.car-brand');
-const carModel = document.querySelector('.car-model');
-/*const fuelTypes = document.querySelectorAll ('input[name="fuel-type"]');
+//const carBrand = document.querySelector('.car-brand');
+//const carModel = document.querySelector('.car-model');
+/*const fuelType = document.querySelectorAll ('input[name="fuel-type"]');
 const engineVol = document.querySelector('input[name="type-volume"]');
 
 const paymentMeth = document.querySelectorAll ('input[name="payment"]');
@@ -36,8 +36,8 @@ const totalPrice = document.querySelector('#total-price');*/
         Carnival: 72000,
         Rio: 86000,
     },
-};
-*/
+};*/
+
 
 //Устанавливаем слушатель на carBrand
 /*carBrand.addEventListener ("click", () => {
@@ -52,11 +52,12 @@ const totalPrice = document.querySelector('#total-price');*/
 
 //Устанавливаем слушатель на "подержанный" option
 const usedCar = document.getElementById("used");
-const ageCar = document.querySelector (".car-age");
+const ageCar = document.querySelector(".car-age");
 usedCar.addEventListener ("click", () => {
 ageCar.style.display = "block";
 });
 
+const engineCap = document.querySelector('input[name="capacity"]');//Объём двигателя
 
 //Устанавливаем слушатель на Button 
 const btn = document.querySelector('.btn');
@@ -64,16 +65,20 @@ const btn = document.querySelector('.btn');
         calcPrice();
     };
 
-    function calcPrice() {
-        const engineVol = +document.querySelector('.v-1').value;//Объём двигателя
+    function  calcPrice() {
+        const engine = parseFloat(engineCap.value);//Объём двигателя
+        console.log(engine);
+
 
         const radioFuel = document.querySelectorAll('.f-1');//Тип топлива
+        let fuelType = "";
         for (let i =0; i< radioFuel.length; i++){
             if (radioFuel[i].checked){
-                radioFuel[i].value;
+                fuelType = radioFuel[i].value;
                 break;
             }
         };
+
         const radioCondition = document.querySelectorAll('.c-1');//Состояния автомобиля 
         for (let i =0; i< radioCondition.length; i++){
             if (radioCondition[i].checked){
@@ -83,13 +88,17 @@ const btn = document.querySelector('.btn');
         };
 
         const carBrand = document.querySelector('.car-brand').value;//Марка автомобиля
-        const carModel = document.querySelector('.car-model').value;//Модель автомобиля
-        const carOwnerNum = document.querySelector('.number-owners').value;//владельц
+        const carModel = parseFloat(document.querySelector('.car-model').value);//Модель автомобиля
+        console.log(carModel);
+
+        const carOwnerNum = parseFloat(document.querySelector('.number-owners').value);//владельц
+        console.log(carOwnerNum);
         const paymentMethod = document.querySelector('.payment-method').value;//Способ оплаты
         
-        const carPrice = document.querySelector('.car-price').value; // цены для моделей авто
-        
-        const basicPrice = carPrice[carBrand][carModel];
+        //const carPrice = parseFloat(document.querySelector('.car-price').value); // цены для моделей авто
+        //console.log(carPrice);
+
+        const basicPrice = [carBrand][carModel];
         let conditionCoefficient = 1;
         let carOwnerCoefficient = 1;
         let paymentCoefficient = 1;
