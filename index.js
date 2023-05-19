@@ -1,3 +1,55 @@
+//Элементы формы
+
+//const carBrand = document.querySelector('.car-brand');
+//const carModel = document.querySelector('.car-model');
+/*const fuelType = document.querySelectorAll ('input[name="fuel-type"]');
+const engineVol = document.querySelector('input[name="type-volume"]');
+
+const paymentMeth = document.querySelectorAll ('input[name="payment"]');
+const totalPrice = document.querySelector('#total-price');*/
+
+
+// цены для моделей авто
+
+//Задаём цены для моделей авто
+/*const carPrice = {
+    BMW: {
+        X1: 120000,
+        X3: 130000,
+        X4: 140000,
+    },
+
+    Mazda: {
+        CX3: 80500,
+        CX5: 90000,
+        CX9: 105000,
+    },
+
+    MercedesBenz: {
+        GLC250: 230000,
+        GLC300: 250500,
+        SClass: 308000,
+    },
+
+    Kia:{
+        Sorento: 67000,
+        Carnival: 72000,
+        Rio: 86000,
+    },
+};*/
+
+
+//Устанавливаем слушатель на carBrand
+/*carBrand.addEventListener ("click", () => {
+    const models = carModel[carBrand.value];
+    for (const model in models) {
+    const option = document.createElement("option");
+    //option.value = model;
+    option.text = model;
+    carModel.add(option);
+}
+});*/
+
 //Устанавливаем слушатель на "подержанный" option
 const usedCar = document.getElementById("used");
 const ageCar = document.querySelector(".car-age");
